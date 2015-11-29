@@ -47,4 +47,28 @@ class App_TapperUITests: XCTestCase {
         XCTAssertFalse(tapOutput.hittable)
     }
     
+    func testPlayButton() {
+        let app = XCUIApplication()
+        let playButton = app.buttons["play button"]
+        let tapsToWin = app.textFields["How many taps to win?"]
+
+        tapsToWin.tap()
+        tapsToWin.typeText("5")
+        playButton.tap()
+        
+        let gameTitle = app.images["tapper"]
+        
+        let tapButton = app.buttons["coin"]
+        let tapOutput = app.staticTexts["0 Taps"]
+        
+        // Items hidden
+        XCTAssertFalse(gameTitle.hittable)
+        XCTAssertFalse(tapsToWin.hittable)
+        XCTAssertFalse(playButton.hittable)
+        
+        // Items now displayed
+        XCTAssert(tapButton.hittable)
+        XCTAssert(tapOutput.hittable)
+    }
+    
 }

@@ -27,6 +27,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func playButtonTapped(sender: AnyObject) {
+        showPlayControls(true)
+    }
+    
+    // MARK: Helper functions
+    func showPlayControls(displayGameControls: Bool) {
+        playButton.hidden = displayGameControls
+        gameTitleImage.hidden = displayGameControls
+        tapGoalTextField.hidden = displayGameControls
+        tapOutputLabel.hidden = !displayGameControls
+        tapButton.hidden = !displayGameControls
+    }
 
 }
 
