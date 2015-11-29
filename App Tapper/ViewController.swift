@@ -16,6 +16,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var tapOutputLabel: UILabel!
     @IBOutlet weak var tapButton: UIButton!
     
+    var enteredTapGoal: Int {
+        get {
+            if let goalText = tapGoalTextField.text, goal = Int(goalText) {
+                return goal
+            } else {
+                return 0
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +37,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func playButtonTapped(sender: AnyObject) {
-        showPlayControls(true)
+        if enteredTapGoal > 0 {
+            showPlayControls(true)
+        }
     }
     
     // MARK: Helper functions
