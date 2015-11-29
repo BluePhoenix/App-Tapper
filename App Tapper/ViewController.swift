@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         }
     }
     
+    var goalTaps: Int = 0
+    var currentTaps: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -39,7 +42,14 @@ class ViewController: UIViewController {
     @IBAction func playButtonTapped(sender: AnyObject) {
         if enteredTapGoal > 0 {
             showPlayControls(true)
+            currentTaps = 0
+            goalTaps = enteredTapGoal
         }
+    }
+    
+    @IBAction func tapButtonTapped(sender: AnyObject) {
+        currentTaps++
+        updateTapOutputLabel()
     }
     
     // MARK: Helper functions
@@ -49,6 +59,14 @@ class ViewController: UIViewController {
         tapGoalTextField.hidden = displayGameControls
         tapOutputLabel.hidden = !displayGameControls
         tapButton.hidden = !displayGameControls
+    }
+    
+    func updateTapOutputLabel() {
+        // Pluralize the text
+        let pluralEnd = (currentTaps == 1 ? "" : "s")
+        let tapOutputString = "\(currentTaps) Tap\(pluralEnd)"
+        
+        tapOutputLabel.text = tapOutputString
     }
 
 }
