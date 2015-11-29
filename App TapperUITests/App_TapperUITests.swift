@@ -37,10 +37,12 @@ class App_TapperUITests: XCTestCase {
         let tapButton = app.buttons["coin"]
         let tapOutput = app.staticTexts["0 Taps"]
         
+        // Items displayed
         XCTAssert(gameTitle.hittable)
         XCTAssert(tapsToWin.hittable)
         XCTAssert(playButton.hittable)
         
+        // Items initially hidden
         XCTAssertFalse(tapButton.hittable)
         XCTAssertFalse(tapOutput.hittable)
     }
