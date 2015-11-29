@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var gameTitleImage: UIImageView!
+    @IBOutlet weak var tapGoalTextField: UITextField!
+    @IBOutlet weak var tapOutputLabel: UILabel!
+    @IBOutlet weak var tapButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -28,9 +28,21 @@ class App_TapperUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testItemsDisplayOnLoad() {
+        let app = XCUIApplication()
+        let gameTitle = app.images["tapper"]
+        let tapsToWin = app.textFields["How many taps to win?"]
+        let playButton = app.buttons["play button"]
+        
+        let tapButton = app.buttons["coin"]
+        let tapOutput = app.staticTexts["0 Taps"]
+        
+        XCTAssert(gameTitle.hittable)
+        XCTAssert(tapsToWin.hittable)
+        XCTAssert(playButton.hittable)
+        
+        XCTAssertFalse(tapButton.hittable)
+        XCTAssertFalse(tapOutput.hittable)
     }
     
 }
