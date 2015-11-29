@@ -50,9 +50,24 @@ class ViewController: UIViewController {
     @IBAction func tapButtonTapped(sender: AnyObject) {
         currentTaps++
         updateTapOutputLabel()
+        
+        if gameIsOver() {
+            resetGame()
+        }
     }
     
     // MARK: Helper functions
+    func gameIsOver() -> Bool {
+        return (currentTaps >= enteredTapGoal)
+    }
+    
+    func resetGame() {
+        currentTaps = 0
+        goalTaps = 0
+        tapGoalTextField.text = ""
+        showPlayControls(false)
+    }
+    
     func showPlayControls(displayGameControls: Bool) {
         playButton.hidden = displayGameControls
         gameTitleImage.hidden = displayGameControls
