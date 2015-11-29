@@ -41,10 +41,10 @@
                                 <rect key="frame" x="75" y="357" width="450" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 Taps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFf-eE-vEN">
-                                <rect key="frame" x="189" y="342" width="222" height="60"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Taps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFf-eE-vEN">
+                                <rect key="frame" x="227" y="342" width="147" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,7 +60,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.92941176470588238" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="CDH-Vy-Xw0" firstAttribute="centerY" secondItem="GQ6-4i-uY8" secondAttribute="centerY" multiplier="3:5" id="50h-mu-AE5"/>
                             <constraint firstItem="zzh-J9-Nnn" firstAttribute="width" secondItem="GQ6-4i-uY8" secondAttribute="width" multiplier="3:4" id="Apv-vd-9u2"/>
